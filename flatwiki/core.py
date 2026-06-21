@@ -487,7 +487,7 @@ def admin_edit_file(filename):
         return "Error: File does not exist.", 404
         
     if request.method == 'POST':
-        updated_markdown = request.form.get('content', '')
+        updated_markdown = request.form.get('content', '').replace('\r\n', '\n')
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(updated_markdown)
         return redirect(url_for('admin_dashboard'))
