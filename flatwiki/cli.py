@@ -2,12 +2,12 @@ import sys
 import os
 import json
 from argon2 import PasswordHasher
-from flatwiki.core import run_server
 
 ph = PasswordHasher()
 
 def main():
     if len(sys.argv) == 1:
+        from flatwiki.core import run_server
         run_server()
     
     elif len(sys.argv) > 2:
