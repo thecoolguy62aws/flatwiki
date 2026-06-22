@@ -257,7 +257,6 @@ h1 {
 """
     return css, 200, {'Content-Type': 'text/css'}
 
-
 PUBLIC_LAYOUT = """
 <!DOCTYPE html>
 <html>
@@ -555,7 +554,6 @@ def admin_dashboard():
         })
         
     return render_template_string(ADMIN_LAYOUT, files_data=files_data)
-
 
 @app.route('/', defaults={'path': 'index'})
 @app.route('/<path:path>')
