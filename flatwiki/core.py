@@ -13,17 +13,17 @@ ph = PasswordHasher()
 app = Flask(__name__)
 
 CURRENT_DIR = os.getcwd()
-CONFIG_PATH = os.path.join(CURRENT_DIR, "config.json")
+CONFIG_PATH = os.path.join(CURRENT_DIR, "flatwiki.json")
 
 if not os.path.exists(CONFIG_PATH):
-    print(f"Error: Could not find 'config.json' in {CURRENT_DIR}")
+    print(f"Error: Could not find 'flatwiki.json' in {CURRENT_DIR}")
     sys.exit(1)
 
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     try:
         CONFIG = json.load(f)
     except:
-        print("Error: Invalid JSON content in config.json")
+        print("Error: Invalid JSON content in flatwiki.json")
         exit(1)
 
 PAGES_DIR = os.path.join(CURRENT_DIR, CONFIG["pages_directory"])
