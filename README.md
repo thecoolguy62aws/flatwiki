@@ -11,7 +11,7 @@ FlatWiki is a lightweight wiki engine. A FlatWiki is not your traditional wiki: 
 1. Install via pip. Common commands are: `pip install flatwiki`, `pip3 install flatwiki`, `pipx install flatwiki`.
 2. Navigate to a directory you would like to run flatwiki in.
 3. Run `flatwiki config` and answer the prompts.
-4. Run `flatwiki create-user` and add a administrator for you to log in as.
+4. Run `flatwiki create-user` and add an administrator for you to log in as.
 5. Run `flatwiki` to start the server!
 
 ### Usage
